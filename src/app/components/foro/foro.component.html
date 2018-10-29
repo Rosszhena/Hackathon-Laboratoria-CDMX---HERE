@@ -1,12 +1,22 @@
 <div class="container">
-    <app-form></app-form>
     <div class="row mt-5">
-        <div class="col-10">
-            <ul>
-                <li class="text" *ngFor="let post of posts | async">
-                    {{ post.publication }}
-                </li>
-            </ul>
+        <div class="col-10 offset-1">
+            <app-form></app-form>
+        </div>
+    </div>
+    <div class="row mt-5">
+        <div class="col-10 offset-1">
+            <div class="card mb-3" *ngFor="let post of posts | async">
+                <div class="card-header">
+                    Nombre de usuario
+                    <div class="float-right" data-toggle="modal" data-target="#exampleModalCenter" *ngIf="idLogUser === post.userID"><i
+                            class="fas fa-pencil-alt"></i></div>
+                    <div class="float-right mr-3" (click)="clickDelete(post)" *ngIf="idLogUser === post.userID"><i
+                            class="far fa-trash-alt"></i></div>
+                    <span class="date float-right mr-3">Fecha</span>
+                </div>
+                <div class="alert alert-primary" role="alert">{{ post.publication }}</div>
+            </div>
         </div>
     </div>
 </div>
