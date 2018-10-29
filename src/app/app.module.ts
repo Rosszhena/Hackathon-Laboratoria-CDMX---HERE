@@ -11,6 +11,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HomepageComponent } from './components/homepage/homepage.component';
 import { AgendaComponent } from './components/agenda/agenda.component';
+import { ListaComponent } from './lista/lista.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { AgendaComponent } from './components/agenda/agenda.component';
     HeaderComponent,
     FooterComponent,
     HomepageComponent,
-    AgendaComponent
+    AgendaComponent,
+    ListaComponent,
   ],
   imports: [
     BrowserModule,
