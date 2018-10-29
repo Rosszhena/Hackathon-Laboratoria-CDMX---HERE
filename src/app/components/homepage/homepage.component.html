@@ -1,3 +1,86 @@
-<p>
-  homepage works!
-</p>
+<nav class="navbar ">
+  <section class="row align-items-center">
+    <div class="col">
+    <button class="btn" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"><i class="fas fa-bars"></i></button>
+  </div>
+  <div class="col">
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+          <span class="input-group-text" id="basic-addon1"><i class="fas fa-search-location"></i></span>
+        </div>
+      <input type="text" class="form-control" placeholder="Direccion">
+    </div>
+  </div>  
+  </section>
+
+  </nav>
+<nav class="collapse navbar-collapse" id="navbarSupportedContent">
+  <section>
+    <ul class="menu-lateral">
+      <br/>
+      <li class="opciones-menu-lateral">
+        <a data-toggle="modal" data-target="#personalModal">Personal</a>
+      </li>
+      <br/>
+      <li class="opciones-menu-lateral">
+        <a >Video en Vivo</a>
+      </li>
+      <br/>
+      <li class="opciones-menu-lateral">
+        <a data-toggle="modal" data-target="#emergenciaModal">Emergencias</a>
+      </li>
+      <br/>
+      <li class="opciones-menu-lateral">
+        <a >Cerrar Sesion</a>
+      </li>
+    </ul>
+  </section>
+</nav>
+<!-- Modal del personal -->
+<div class="modal fade" id="personalModal" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h6>Conoce al personal</h6>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">X</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div>
+            <img src="./../../../assets/images/1.jpg" alt="">
+            <p>Nombre de la encargada</p>
+          </div>
+          <div>
+            <img src="./../../../assets/images/2.jpg" alt="">
+            <p>Nombre del chofer</p>
+          </div>
+          <p>numero de las placas</p>          
+        </div>        
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal de emergencias -->
+<div class="modal fade" id="emergenciaModal" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h6>Numeros de emergencia</h6>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">X</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <input type="radio" aria-label="Radio button for following text input">
+            <label>Bomberos</label> <br/>
+            <input type="radio" aria-label="Radio button for following text input">
+            <label>Proteccion Civil</label> <br/>
+            <input type="radio" aria-label="Radio button for following text input">
+            <label>911</label>
+            <button class="btn btn-block btn-danger">LLAMAR</button>           
+        </div>        
+      </div>
+    </div>
+  </div>
+
