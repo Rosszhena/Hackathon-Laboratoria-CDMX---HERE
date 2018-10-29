@@ -6,12 +6,14 @@ import { HomepageComponent } from './components/homepage/homepage.component';
 import { ForoComponent } from './components/foro/foro.component';
 import { LoginComponent } from './components/login/login.component';
 import { AgendaComponent } from './components/agenda/agenda.component';
+import { ListaComponent } from './components/lista/lista.component';
 
 const routes: Routes = [
   { path: '', component: LoginComponent },
   { path: 'homepage', component: HomepageComponent },
   { path: 'foro', component: ForoComponent },
-  { path: 'agenda', component: AgendaComponent }
+  { path: 'agenda', component: AgendaComponent },
+  { path: 'lista', component: ListaComponent }
 ];
 
 @NgModule({

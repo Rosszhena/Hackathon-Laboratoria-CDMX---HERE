@@ -16,7 +16,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HomepageComponent } from './components/homepage/homepage.component';
 import { AgendaComponent } from './components/agenda/agenda.component';
-import { ListaComponent } from './lista/lista.component';
+import { ListaComponent } from './components/lista/lista.component';
 import { FormComponent } from './components/form/form.component';
 
 import {FlashMessagesModule} from 'angular2-flash-messages';
