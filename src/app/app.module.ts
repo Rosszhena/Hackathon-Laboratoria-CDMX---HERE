@@ -1,16 +1,12 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-<<<<<<< HEAD
-
-=======
 import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireStorageModule } from '@angular/fire/storage';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { environment } from '../environments/environment';
 import { AppRoutingModule } from './app-routing.module';
->>>>>>> upstream/master
 import { HereMapsModule } from 'ng2-heremaps';
 
 import { AppComponent } from './app.component';
@@ -26,11 +22,8 @@ import { FormComponent } from './components/form/form.component';
 import {FlashMessagesModule} from 'angular2-flash-messages';
 import {FlashMessagesService} from 'angular2-flash-messages';
 
-import { AngularFireModule} from 'angularfire2';
-import { AngularFireAuthModule} from 'angularfire2/auth';
-
 import { AuthService } from './services/auth.service';
-import { environment } from '../environments/environment';
+
 
 
 
@@ -56,17 +49,11 @@ import { environment } from '../environments/environment';
       libraries: ['core', 'service']
     }),
     AppRoutingModule,
-<<<<<<< HEAD
-    FormsModule,
-    AngularFireAuthModule,
-    AngularFireModule.initializeApp(environment.firebaseConfig),
-    FlashMessagesModule
-=======
     AngularFireModule.initializeApp(environment.firebase),
+    FlashMessagesModule,
     AngularFirestoreModule,
     AngularFireAuthModule,
     AngularFireStorageModule
->>>>>>> upstream/master
   ],
   providers: [AuthService, FlashMessagesService],
   bootstrap: [AppComponent]
