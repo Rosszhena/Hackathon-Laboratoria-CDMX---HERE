@@ -19,6 +19,14 @@ import { AgendaComponent } from './components/agenda/agenda.component';
 import { ListaComponent } from './components/lista/lista.component';
 import { FormComponent } from './components/form/form.component';
 
+import {FlashMessagesModule} from 'angular2-flash-messages';
+import {FlashMessagesService} from 'angular2-flash-messages';
+
+import { AuthService } from './services/auth.service';
+
+
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -42,11 +50,12 @@ import { FormComponent } from './components/form/form.component';
     }),
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebase),
+    FlashMessagesModule,
     AngularFirestoreModule,
     AngularFireAuthModule,
     AngularFireStorageModule
   ],
-  providers: [],
+  providers: [AuthService, FlashMessagesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
