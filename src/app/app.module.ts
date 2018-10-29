@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 import { HereMapsModule } from 'ng2-heremaps';
 
@@ -11,6 +12,17 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HomepageComponent } from './components/homepage/homepage.component';
 import { AgendaComponent } from './components/agenda/agenda.component';
+
+import {FlashMessagesModule} from 'angular2-flash-messages';
+import {FlashMessagesService} from 'angular2-flash-messages';
+
+import { AngularFireModule} from 'angularfire2';
+import { AngularFireAuthModule} from 'angularfire2/auth';
+
+import { AuthService } from './services/auth.service';
+import { environment } from '../environments/environment';
+
+
 
 @NgModule({
   declarations: [
@@ -31,8 +43,12 @@ import { AgendaComponent } from './components/agenda/agenda.component';
       libraries: ['core', 'service']
     }),
     AppRoutingModule,
+    FormsModule,
+    AngularFireAuthModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    FlashMessagesModule
   ],
-  providers: [],
+  providers: [AuthService, FlashMessagesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
