@@ -1,3 +1,12 @@
-<p>
-  foro works!
-</p>
+<div class="container">
+    <app-form></app-form>
+    <div class="row mt-5">
+        <div class="col-10">
+            <ul>
+                <li class="text" *ngFor="let post of posts | async">
+                    {{ post.publication }}
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
