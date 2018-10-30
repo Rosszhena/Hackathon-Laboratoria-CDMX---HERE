@@ -1,24 +1,51 @@
 <app-header></app-header>
-<app-map #map appId="Jl6dgI6xgxQkHhB6m6xm" appCode="SjyJioAfaeKasZSqEx90Ug" lat="19.404556" lng="-99.164029" width="75%"
-  height="530px"></app-map>
+
+<!--padres-->
+<article class="container direccion">
+    <section class="row">
+        <div class="col">
+            <app-map #map appId="Jl6dgI6xgxQkHhB6m6xm" appCode="SjyJioAfaeKasZSqEx90Ug" lat="19.404556" lng="-99.164029"
+                width="100%" height="530px"></app-map>
+        </div>
+    </section>
+</article>
+<main class="container ">
+    <div class="contenedor">
+        <button class="botonF1" (click)="showList()">
+            <span>+</span>
+        </button>
+    </div>
+</main>
+<br />
 
 <!--Agenda padres-->
 <!--codigo-->
 
 <!--conductores-->
 <article class="container">
-  <section class="row mt-3">
-    <div class="col-sm-12">
-      <button class="btn btn-block boton-jornada"(click)="upNotification()">
-        Terminar Jornada
-      </button>
-    </div>
-  </section>
-  <section class="row mt-3">
-    <div class="col-sm-12">
-      <button class="btn btn-block boton-lista" routerLink="/lista">
-        Lista
-      </button>
-    </div>
-  </section>
+    <section class="row mt-3">
+        <div class="col-sm-12">
+            <button class="btn btn-block boton-jornada" (click)="upNotification()">
+                Terminar Jornada
+            </button>
+        </div>
+    </section>
+    <section class="row mt-3">
+        <div class="col-sm-12">
+            <button class="btn btn-block boton-lista" routerLink="/lista">
+                Lista
+            </button>
+        </div>
+    </section>
 </article>
+
+<div class="container mt-5" *ngIf="isList">
+    <div class="row">
+        <div class="col-md-6">
+            <app-list-add></app-list-add>
+        </div>
+        <div class="col-md-6">
+            <app-list></app-list>
+        </div>
+    </div>
+</div>

@@ -51,7 +51,7 @@ export class MapComponent implements OnInit {
       this.mapElement.nativeElement,
       defaultLayers.normal.map,
       {
-        zoom: 10,
+        zoom: 12,
         center: { lat: this.lat, lng: this.lng }
       }
     );
@@ -72,7 +72,7 @@ export class MapComponent implements OnInit {
 
   private dropMarker(coordinates: any, data: any) {
     let marker = new H.map.Marker(coordinates);
-    marker.setData("<p>" + data.title + "<br>" + data.vicinity + "</p>");
+    marker.setData(`<p style="background-color:#FFFFFF; width:150px;"> ${data.title} <br> ${data.vicinity} </p>`);
     marker.addEventListener('tap', event => {
       let bubble = new H.ui.InfoBubble(event.target.getPosition(), {
         content: event.target.getData()

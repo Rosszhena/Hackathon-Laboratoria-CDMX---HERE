@@ -16,6 +16,7 @@ export interface Issue {
   providedIn: 'root'
 })
 export class ConnectionService {
+  [x: string]: any;
   private issuesCollection: AngularFirestoreCollection<Issue>;
   issues: Observable<Issue[]>;
   private issueDoc: AngularFirestoreDocument<Issue>;

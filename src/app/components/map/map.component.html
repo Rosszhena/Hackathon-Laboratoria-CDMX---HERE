@@ -1,15 +1,20 @@
 <div class="container">
   <div class="row">
-  <div class="col school-map">
-    <div style="padding: 10px 0">
-      <input type="text" placeholder="Buscar escuelas..." [(ngModel)]="query" />
-      <button (click)="places(query)"><i class="fas fa-search"></i></button>
+    <div class="col-6 offset-3">
+      <div style="padding: 10px 0">
+        <div class="input-group mb-3">
+          <input type="text" class="form-control" placeholder="Buscar escuelas" aria-label="Username" aria-describedby="basic-addon1"
+            [(ngModel)]="query">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1" (click)="places(query)"><i class="fas fa-search"></i></span>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
-  </div>
-  <div class="row">
-    <div class="col school-map">
-    <div class="mapa-centrado" #map [style.width]="width" [style.height]="height"></div>
-  </div>
 </div>
+<div class="row">
+  <div class="col-12">
+    <div #map [style.width]="width" [style.height]="height"></div>
+  </div>
 </div>
