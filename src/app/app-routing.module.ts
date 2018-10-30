@@ -7,10 +7,12 @@ import { ForoComponent } from './components/foro/foro.component';
 import { LoginComponent } from './components/login/login.component';
 import { AgendaComponent } from './components/agenda/agenda.component';
 import { ListaComponent } from './components/lista/lista.component';
+import { AuthGuard } from './guards/auth.guard';
+
 
 const routes: Routes = [
   { path: '', component: LoginComponent },
-  { path: 'homepage', component: HomepageComponent },
+  { path: 'homepage', component: HomepageComponent, canActivate: [AuthGuard] },
   { path: 'foro', component: ForoComponent },
   { path: 'agenda', component: AgendaComponent },
   { path: 'lista', component: ListaComponent }

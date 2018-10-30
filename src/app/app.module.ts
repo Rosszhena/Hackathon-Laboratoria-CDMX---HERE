@@ -24,6 +24,7 @@ import {FlashMessagesService} from 'angular2-flash-messages';
 
 import { AuthService } from './services/auth.service';
 import { ConnectionService } from './services/connection.service';
+import { AuthGuard } from './guards/auth.guard';
 
 @NgModule({
   declarations: [
@@ -53,7 +54,7 @@ import { ConnectionService } from './services/connection.service';
     AngularFireAuthModule,
     AngularFireStorageModule
   ],
-  providers: [AuthService, FlashMessagesService, ConnectionService],
+  providers: [AuthService, AuthGuard, FlashMessagesService, ConnectionService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
