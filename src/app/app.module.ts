@@ -19,8 +19,8 @@ import { AgendaComponent } from './components/agenda/agenda.component';
 import { ListaComponent } from './components/lista/lista.component';
 import { FormComponent } from './components/form/form.component';
 
-import {FlashMessagesModule} from 'angular2-flash-messages';
-import {FlashMessagesService} from 'angular2-flash-messages';
+import { FlashMessagesModule } from 'angular2-flash-messages';
+import { FlashMessagesService } from 'angular2-flash-messages';
 
 import { AuthService } from './services/auth.service';
 import { ConnectionService } from './services/connection.service';
@@ -48,7 +48,7 @@ import { AuthGuard } from './guards/auth.guard';
       libraries: ['core', 'service']
     }),
     AppRoutingModule,
-    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireModule.initializeApp(environment.firebaseConfig),
     FlashMessagesModule,
     AngularFirestoreModule,
     AngularFireAuthModule,
