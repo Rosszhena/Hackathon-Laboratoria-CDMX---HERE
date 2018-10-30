@@ -10,6 +10,7 @@ declare var H: any;
 export class MapComponent implements OnInit {
   private ui: any;
   private search: any;
+  public query: string;
 
   @ViewChild("map")
   public mapElement: ElementRef;
@@ -35,7 +36,9 @@ export class MapComponent implements OnInit {
   private platform: any;
   private map: any;
 
-  public constructor() { }
+  public constructor() {
+    this.query = "escuela";
+  }
 
   public ngOnInit() {
     this.platform = new H.service.Platform({
