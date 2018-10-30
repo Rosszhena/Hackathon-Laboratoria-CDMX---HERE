@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { AngularFirestore } from '@angular/fire/firestore';
-import { Observable } from 'rxjs';
 import { ConnectionService } from '../../services/connection.service';
 
 @Component({
@@ -11,7 +9,7 @@ import { ConnectionService } from '../../services/connection.service';
 export class ForoComponent implements OnInit {
 
   issues: any;
-  updateIssue: any = {
+  currentIssue: any = {
     publication: ''
   }
 
@@ -29,11 +27,11 @@ export class ForoComponent implements OnInit {
   }
 
   update(issue) {
-    this.updateIssue = issue;
+    this.currentIssue = issue;
   }
 
-  addUpdate(){
-    this.connection.updateIssue(this.updateIssue);
+  addUpdate() {
+    this.connection.updateIssue(this.currentIssue);
   }
 
 }

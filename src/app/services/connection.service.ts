@@ -39,12 +39,12 @@ export class ConnectionService {
     this.issuesCollection.add(issue);
   }
 
-  deleteIssue(issue){
+  deleteIssue(issue) {
     this.issueDoc = this.afs.doc<Issue>(`issues/${issue.id}`);
     this.issueDoc.delete();
   }
 
-  updateIssue(issue){
+  updateIssue(issue) {
     this.issueDoc = this.afs.doc<Issue>(`issues/${issue.id}`);
     this.issueDoc.update(issue);
   }

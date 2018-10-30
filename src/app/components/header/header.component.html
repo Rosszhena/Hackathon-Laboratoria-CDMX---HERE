@@ -1,16 +1,16 @@
 <nav class="navbar navbar-expand-lg navbar-dark fondo-obscuro">
-    <a class="navbar-brand titulos" href="#">Safety</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <a class="navbar-brand" routerLink="/homepage">
+        <img src="assets/images/Safety.png" height="40" alt="">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
-      </button>
+    </button>
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
             <li class="opciones-menu-lateral">
-                <button class="btn titulos">Home</button>
-            </li>
-            <li class="opciones-menu-lateral">
-                <button class="btn titulos">Foro</button>
+                <button class="btn titulos" routerLink="/foro">Foro</button>
             </li>
             <li class="opciones-menu-lateral">
                 <button class="btn titulos" data-toggle="modal" data-target="#personalModal">Personal</button>
@@ -36,19 +36,27 @@
             <div class="modal-header">
                 <h6 class="titulos-modal centrado">Conoce al personal</h6>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">X</span>
-            </button>
+                    <span aria-hidden="true">X</span>
+                </button>
             </div>
             <div class="modal-body">
-                <div>
-                    <img class="centrado-img" src="./../../../assets/images/1.jpg" alt="">
-                    <p class="centrado">Responsable:</p>
-                    <p class="centrado">Luz Sanchez</p>
+                <div class="row mb-2">
+                    <div class="col-6">
+                        <img class="centrado-img" src="assets/images/1.jpg" alt="">
+                    </div>
+                    <div class="col-6">
+                        <p class="centrado">Responsable:</p>
+                        <p class="centrado">Luz Sanchez</p>
+                    </div>
                 </div>
-                <div>
-                    <img class="centrado-img" src="./../../../assets/images/2.jpg" alt="">
-                    <p class="centrado">Conductor:</p>
-                    <p class="centrado">Alberto Ruiz</p>
+                <div class="row mb-4">
+                    <div class="col-6">
+                        <img class="centrado-img" src="assets/images/2.jpg" alt="">
+                    </div>
+                    <div class="col-6">
+                        <p class="centrado">Conductor:</p>
+                        <p class="centrado">Alberto Ruiz</p>
+                    </div>
                 </div>
                 <p class="centrado">Numero de placas:</p>
                 <p class="centrado">NUT567-2i</p>
@@ -64,16 +72,15 @@
             <div class="modal-header">
                 <h6 class="titulos-modal">Numeros de emergencia</h6>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">X</span>
-            </button>
+                    <span aria-hidden="true">X</span>
+                </button>
             </div>
             <div class="modal-body">
-                <input type="radio" aria-label="Radio button for following text input">
-                <label>Bomberos</label> <br/>
-                <input type="radio" aria-label="Radio button for following text input">
-                <label>Proteccion Civil</label> <br/>
-                <input type="radio" aria-label="Radio button for following text input">
-                <label>911</label>
+                <input type="radio" aria-label="Radio button for following text input"> Bomberos<br />
+                <input type="radio" aria-label="Radio button for following text input"> Proteccion Civil<br />
+                <input type="radio" aria-label="Radio button for following text input"> 911<br />
+            </div>
+            <div class="modal-footer">
                 <button class="btn btn-block btn-danger">LLAMAR</button>
             </div>
         </div>
