@@ -30,6 +30,8 @@ import { AuthGuard } from './guards/auth.guard';
 import { ConnectionbdService } from './services/connectionbd.service';
 
 
+import { MapComponent } from './components/map/map.component';
+import { RoutingComponent } from './components/routing/routing.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +44,9 @@ import { ConnectionbdService } from './services/connectionbd.service';
     ListaComponent,
     FormComponent,
     ListComponent,
-    ListAddComponent
+    ListAddComponent,
+    MapComponent,
+    RoutingComponent
   ],
   imports: [
     BrowserModule,

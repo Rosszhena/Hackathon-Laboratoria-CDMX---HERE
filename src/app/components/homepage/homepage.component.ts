@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { AngularFirestore } from 'angularfire2/firestore';
 import { Observable } from 'rxjs/Observable';
 import * as $ from 'jquery';
+import { upNotification } from './../../../assets/js/push';
+
 
 @Component({
   selector: 'app-homepage',
@@ -9,10 +11,13 @@ import * as $ from 'jquery';
   styleUrls: ['./homepage.component.css']
 })
 export class HomepageComponent implements OnInit {
+  public query: string;
   public isList: boolean;
   items: Observable<any[]>;
+
   constructor(db: AngularFirestore) {
     this.items = db.collection('agregar').valueChanges();
+    this.query = 'escuela';
    }
 
   ngOnInit() {
@@ -28,5 +33,7 @@ export class HomepageComponent implements OnInit {
     this.isList = !this.isList;
   }
 
-
+  upNotification() {
+    upNotification();
+  }
 }
