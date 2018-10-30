@@ -7,16 +7,39 @@
     </div>
     <div class="row mt-5">
         <div class="col-12">
-            <div class="card mb-3" *ngFor="let post of posts | async">
+            <div class="card mb-3" *ngFor="let post of issues">
                 <div class="card-header">
                     Nombre de usuario
-                    <div class="float-right" data-toggle="modal" data-target="#exampleModalCenter" *ngIf="idLogUser === post.userID"><i
+                    <div class="float-right" (click)="update()" data-toggle="modal" data-target="#exampleModal"><i
                             class="fas fa-pencil-alt"></i></div>
-                    <div class="float-right mr-3" (click)="clickDelete(post)" *ngIf="idLogUser === post.userID"><i
-                            class="far fa-trash-alt"></i></div>
+                    <div class="float-right mr-3" (click)="delete(post)"><i class="far fa-trash-alt"></i></div>
                     <span class="date float-right mr-3">Fecha</span>
                 </div>
-                <div class="alert alert-primary" role="alert">{{ post.publication }}</div>
+                <div class="alert alert-primary" role="alert">{{ post.publication }} -- {{ post.id }}</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form (ngSubmit)="add()">
+                    <input class="form-control" type="text" placeholder="comparte con nosotros" name="publication"
+                        [(ngModel)]="issue.publication">
+                    <button class="btn btn-info mt-3" type="submit">Publicar</button>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
             </div>
         </div>
     </div>
