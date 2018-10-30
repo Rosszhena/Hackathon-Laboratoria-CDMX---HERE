@@ -33,8 +33,8 @@
             </div>
             <div class="modal-body">
                 <form (ngSubmit)="addUpdate()">
-                    <input class="form-control" type="text" placeholder="comparte con nosotros" name="publication"
-                        [(ngModel)]="updateIssue.publication">
+                    <input class="form-control" type="text" name="publication"
+                        [(ngModel)]="currentIssue.publication">
                 </form>
             </div>
             <div class="modal-footer">
