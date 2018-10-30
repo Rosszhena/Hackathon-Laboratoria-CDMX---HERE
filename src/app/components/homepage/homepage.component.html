@@ -16,25 +16,32 @@
 </article>
 <main class="container ">
   <section class="row">
-    <div class="col">
-      <img class="rounded img-map" src="assets/images/maps.png" alt="mapa">
-    </div>
-    <div class="contenedor">
-      <button class="botonF1">
-        <span>+</span>
-      </button>
-      <button class="bton botonF2">
-        <span>+</span>
-      </button>
-      <button class="bton botonF3">
-        <span>+</span>
-      </button>
-      <button class="bton botonF4">
-        <span>+</span>
-      </button>
-      <button class="bton botonF5">
-        <span>+</span>
-      </button>
+    <div class="col-12">
+      <div>
+        <input type="text" [(ngModel)]="query">
+        <button type="button" (click)="getAddress()">Search</button>
+      </div>
+      <div>
+        <input type="text" [(ngModel)]="position">
+        <button type="button" (click)="getAddressFromLatLng()">Search</button>
+      </div>
+      <hr>
+      <table style="width: 100%">
+        <thead>
+          <tr style="text-align: left">
+            <th>Label</th>
+            <th>Latitude</th>
+            <th>Longitude</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let location of locations">
+            <td>{{ raw }}{{ location.Location.Address.Label }}{{ endraw }}</td>
+            <td>{{ raw }}{{ location.Location.DisplayPosition.Latitude }}{{ endraw }}</td>
+            <td>{{ raw }}{{ location.Location.DisplayPosition.Longitude }}{{ endraw }}</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   </section>
 </main>
