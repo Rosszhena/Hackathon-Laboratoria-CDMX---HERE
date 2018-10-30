@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { AngularFirestore } from 'angularfire2/firestore';
 import { Observable } from 'rxjs/Observable';
 import * as $ from 'jquery';
+import { upNotification } from './../../../assets/js/push';
+
 
 @Component({
   selector: 'app-homepage',
@@ -30,4 +32,9 @@ export class HomepageComponent implements OnInit {
   showList() {
     this.isList = !this.isList;
   }
+
+  upNotification() {
+    upNotification();
+  }
+
 }

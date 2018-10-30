@@ -1,4 +1,13 @@
 p {
-    background-color: #FFFFFF !important;
-    width: 150px !important;
+  background-color: #FFFFFF !important;
+  width: 150px !important;
+}
+
+.school-map {
+  margin: 10px 20px;
+}
+
+.mapa-centrado {
+  width: 300px !important;
+  height: 300px !important;
 }
