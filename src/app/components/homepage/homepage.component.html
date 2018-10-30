@@ -11,15 +11,30 @@
                     <input type="text" class="form-control" placeholder="Direccion">
                 </div>
             </form>
-
         </div>
     </section>
 </article>
-
 <main class="container ">
     <section class="row">
         <div class="col">
-            <img class="rounded img-map" src="./../../../assets/images/maps.png" alt="">
+            <img class="rounded img-map" src="assets/images/maps.png" alt="mapa">
+        </div>
+        <div class="contenedor">
+            <button class="botonF1" (click)="showList()">
+        <span>+</span>
+      </button>
+            <!-- <button class="bton botonF2">
+        <span>+</span>
+      </button>
+            <button class="bton botonF3">
+        <span>+</span>
+      </button>
+            <button class="bton botonF4">
+        <span>+</span>
+      </button>
+            <button class="bton botonF5">
+        <span>+</span>
+      </button> -->
         </div>
     </section>
 </main>
@@ -30,36 +45,30 @@
 
 <!--conductores-->
 <article class="container">
-    <section class="row">
+    <section class="row mt-3">
         <div class="col-sm-12">
             <button class="btn btn-block boton-jornada">
         Terminar Jornada
       </button>
         </div>
+    </section>
+    <section class="row mt-3">
         <div class="col-sm-12">
-            <button class="btn btn-block boton-lista">
+            <button class="btn btn-block boton-lista" routerLink="/lista">
         Lista
       </button>
         </div>
     </section>
 </article>
 
-<!--Lista-->
-<app-lista></app-lista>
-
-<div class="container mt-5">
+<div class="container mt-5" *ngIf="isList">
     <div class="row">
-        <div class="col-md-6">
-            <app-list></app-list>
-        </div>
         <div class="col-md-6">
             <app-list-add></app-list-add>
         </div>
+        <div class="col-md-6">
+
+            <app-list></app-list>
+        </div>
     </div>
 </div>
-
-<ul>
-    <li class="text" *ngFor="let item of items | async">
-        {{item.name}}
-    </li>
-</ul>

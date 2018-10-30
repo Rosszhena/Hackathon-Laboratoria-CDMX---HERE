@@ -16,6 +16,7 @@ export interface Issue {
   providedIn: 'root'
 })
 export class ConnectionService {
+  [x: string]: any;
   private issuesCollection: AngularFirestoreCollection<Issue>;
   issues: Observable<Issue[]>;
   private issueDoc: AngularFirestoreDocument<Issue>;
@@ -39,12 +40,12 @@ export class ConnectionService {
     this.issuesCollection.add(issue);
   }
 
-  deleteIssue(issue){
+  deleteIssue(issue) {
     this.issueDoc = this.afs.doc<Issue>(`issues/${issue.id}`);
     this.issueDoc.delete();
   }
 
-  updateIssue(issue){
+  updateIssue(issue) {
     this.issueDoc = this.afs.doc<Issue>(`issues/${issue.id}`);
     this.issueDoc.update(issue);
   }
