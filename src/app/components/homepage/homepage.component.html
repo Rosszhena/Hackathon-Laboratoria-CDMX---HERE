@@ -1,21 +1,6 @@
 <app-header></app-header>
-<!--padres-->
-<article class="container direccion">
-  <section class="row">
-    <div class="col">
-      <form>
-        <div class="input-group mb-3">
-          <div class="input-group-prepend">
-            <span class="input-group-text"><i class="fas fa-search-location"></i></span>
-          </div>
-          <input type="text" class="form-control" placeholder="Direccion">
-        </div>
-      </form>
-    </div>
-  </section>
-</article>
-
-<here-map></here-map>
+<app-map #map appId="Jl6dgI6xgxQkHhB6m6xm" appCode="SjyJioAfaeKasZSqEx90Ug" lat="19.404556" lng="-99.164029" width="75%"
+  height="530px"></app-map>
 
 <!--Agenda padres-->
 <!--codigo-->
@@ -24,7 +9,7 @@
 <article class="container">
   <section class="row mt-3">
     <div class="col-sm-12">
-      <button class="btn btn-block boton-jornada">
+      <button class="btn btn-block boton-jornada"(click)="upNotification()">
         Terminar Jornada
       </button>
     </div>

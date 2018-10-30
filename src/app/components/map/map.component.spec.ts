@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { HereMapComponent } from './here-map.component';
+import { MapComponent } from './map.component';
 
-describe('HereMapComponent', () => {
-  let component: HereMapComponent;
-  let fixture: ComponentFixture<HereMapComponent>;
+describe('MapComponent', () => {
+  let component: MapComponent;
+  let fixture: ComponentFixture<MapComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ HereMapComponent ]
+      declarations: [ MapComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(HereMapComponent);
+    fixture = TestBed.createComponent(MapComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

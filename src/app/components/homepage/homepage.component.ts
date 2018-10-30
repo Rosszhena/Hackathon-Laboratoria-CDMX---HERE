@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { upNotification } from './../../../assets/js/push';
+
 
 @Component({
   selector: 'app-homepage',
@@ -6,10 +8,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./homepage.component.css']
 })
 export class HomepageComponent implements OnInit {
+  public query: string;
 
-  constructor() { }
-
-  ngOnInit() {
+  public constructor() {
+    this.query = "escuela";
   }
 
+  public ngOnInit() { }
+
+  upNotification(){
+    upNotification();
+  }
 }
