@@ -29,7 +29,11 @@ export class ForoComponent implements OnInit {
   }
 
   update(issue) {
-    this.updateIssue
+    this.updateIssue = issue;
+  }
+
+  addUpdate(){
+    this.connection.updateIssue(this.updateIssue);
   }
 
 }

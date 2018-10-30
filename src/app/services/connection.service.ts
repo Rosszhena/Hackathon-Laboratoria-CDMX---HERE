@@ -44,5 +44,8 @@ export class ConnectionService {
     this.issueDoc.delete();
   }
 
-  updateIssue(){}
+  updateIssue(issue){
+    this.issueDoc = this.afs.doc<Issue>(`issues/${issue.id}`);
+    this.issueDoc.update(issue);
+  }
 }

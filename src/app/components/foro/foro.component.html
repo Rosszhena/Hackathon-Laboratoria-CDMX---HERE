@@ -10,7 +10,7 @@
             <div class="card mb-3" *ngFor="let post of issues">
                 <div class="card-header">
                     Nombre de usuario
-                    <div class="float-right" (click)="update()" data-toggle="modal" data-target="#exampleModal"><i
+                    <div class="float-right" (click)="update(post)" data-toggle="modal" data-target="#exampleModal"><i
                             class="fas fa-pencil-alt"></i></div>
                     <div class="float-right mr-3" (click)="delete(post)"><i class="far fa-trash-alt"></i></div>
                     <span class="date float-right mr-3">Fecha</span>
@@ -26,20 +26,20 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                <h5 class="modal-title" id="exampleModalLabel">Actualizar publicacion</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
             <div class="modal-body">
-                <form (ngSubmit)="add()">
+                <form (ngSubmit)="addUpdate()">
                     <input class="form-control" type="text" placeholder="comparte con nosotros" name="publication"
-                        [(ngModel)]="issue.publication">
-                    <button class="btn btn-info mt-3" type="submit">Publicar</button>
+                        [(ngModel)]="updateIssue.publication">
                 </form>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                <button class="btn btn-info" type="submit" data-dismiss="modal">Actualizar</button>
             </div>
         </div>
     </div>
