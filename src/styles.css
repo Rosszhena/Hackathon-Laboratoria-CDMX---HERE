@@ -9,5 +9,9 @@ body {
 }
 
 .H_ib_body {
-  width: 275px;
+  width: 20px;
+}
+
+.H_ib_tail {
+  width: 20px;
 }

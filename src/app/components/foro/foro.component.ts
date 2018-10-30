@@ -10,6 +10,10 @@ export class ForoComponent implements OnInit {
 
   issues: any;
   currentIssue: any = {
+    id: '',
+    userName: '',
+    userID: '',
+    datePost: '',
     publication: ''
   }
 
