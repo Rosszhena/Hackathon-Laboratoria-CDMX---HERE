@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { pruebaNotification } from './../../../assets/js/push1.js';
+
 
 @Component({
   selector: 'app-lista',
@@ -9,7 +11,9 @@ export class ListaComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {
+  ngOnInit() {  }
+  
+  pruebaNotificacion(){
+    pruebaNotification();
   }
-
 }

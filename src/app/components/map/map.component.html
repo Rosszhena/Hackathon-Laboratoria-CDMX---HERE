@@ -1,11 +1,15 @@
 <div class="container">
   <div class="row">
+  <div class="col school-map">
     <div style="padding: 10px 0">
       <input type="text" placeholder="Buscar escuelas..." [(ngModel)]="query" />
-      <button (click)="places(query)">Buscar</button>
+      <button (click)="places(query)"><i class="fas fa-search"></i></button>
     </div>
   </div>
-  <div class="row">
-    <div #map [style.width]="width" [style.height]="height"></div>
   </div>
+  <div class="row">
+    <div class="col school-map">
+    <div class="mapa-centrado" #map [style.width]="width" [style.height]="height"></div>
+  </div>
+</div>
 </div>
