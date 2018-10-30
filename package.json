@@ -23,6 +23,7 @@
         "@angular/router": "~7.0.0",
         "@schematics/angular": "^7.0.3",
         "@types/heremaps": "^3.0.12",
+        "@types/jquery": "^3.3.22",
         "angular2-flash-messages": "^3.0.1",
         "angularfire2": "^5.1.0",
         "bootstrap": "^4.1.3",

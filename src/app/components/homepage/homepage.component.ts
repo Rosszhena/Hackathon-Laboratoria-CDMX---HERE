@@ -10,6 +10,13 @@ export class HomepageComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    $('.botonF1').hover(function () {
+      $('.bton').addClass('animacionVer');
+    })
+    $('.contenedor').mouseleave(function () {
+      $('.bton').removeClass('animacionVer');
+    })
   }
+
 
 }
