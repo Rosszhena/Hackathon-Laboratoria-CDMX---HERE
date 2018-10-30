@@ -26,6 +26,7 @@ import { AuthService } from './services/auth.service';
 import { ConnectionService } from './services/connection.service';
 import { AuthGuard } from './guards/auth.guard';
 import { MapComponent } from './components/map/map.component';
+import { RealvideoComponent } from './components/realvideo/realvideo.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { MapComponent } from './components/map/map.component';
     AgendaComponent,
     ListaComponent,
     FormComponent,
-    MapComponent
+    MapComponent,
+    RealvideoComponent
   ],
   imports: [
     BrowserModule,

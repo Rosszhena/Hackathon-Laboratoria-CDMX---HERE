@@ -1,0 +1,17 @@
+<app-header></app-header>
+<section class="container">
+  <article class="row">
+    <div class="col">
+      <div id="app">
+        <div><video #video id="video" width="300" height="300" autoplay></video></div>
+        <div><button class="btn " id="snap" (click)="capture()">Comenzar Video</button></div>
+        <canvas #canvas id="canvas" width="300" height="300"></canvas>
+        <ul>
+            <li *ngFor="let c of captures">
+                <img src="{{ c }}" height="50" />
+            </li>
+        </ul>
+      </div>
+    </div>
+  </article>
+</section>
