@@ -1,54 +1,58 @@
-<nav class="navbar fondo-obscuro ">
-    <section class="row align-items-center fondo-obscuro">
-      <div class="col fondo-obscuro">
-      <button class="btn" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"><i class="fas fa-bars"></i></button>
-    </div>  
-    </section>
   
+ <nav class="navbar navbar-expand-lg navbar-dark fondo-obscuro">
+      <a class="navbar-brand titulos" href="#">Safety</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="opciones-menu-lateral">
+              <button class="btn titulos">Home</button>
+            </li>
+            <li class="opciones-menu-lateral">
+                <button class="btn titulos">Foro</button>
+            </li>
+            <li class="opciones-menu-lateral">
+              <button class="btn titulos" data-toggle="modal" data-target="#personalModal">Personal</button>
+            </li>
+            <li class="opciones-menu-lateral">
+              <button class="btn titulos" >Video en Vivo</button>
+            </li>
+            <li class="opciones-menu-lateral">
+              <button class=" btn titulos" data-toggle="modal" data-target="#emergenciaModal">Emergencias</button>
+            </li>
+            <li class="opciones-menu-lateral">
+              <button class="btn titulos" >Cerrar Sesion</button>
+            </li>          
+        </ul>        
+      </div>
     </nav>
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <section class="">
-      <ul class="menu-lateral fondo-claro">
-        <br/>
-        <li class="opciones-menu-lateral">
-          <a class="titulos" data-toggle="modal" data-target="#personalModal">Personal</a>
-        </li>
-        <br/>
-        <li class="opciones-menu-lateral">
-          <a class="titulos" >Video en Vivo</a>
-        </li>
-        <br/>
-        <li class="opciones-menu-lateral">
-          <a class="titulos" data-toggle="modal" data-target="#emergenciaModal">Emergencias</a>
-        </li>
-        <br/>
-        <li class="opciones-menu-lateral">
-          <a class="titulos" >Cerrar Sesion</a>
-        </li>
-      </ul>
-    </section>
-  </div> 
+ 
   
   <!-- Modal del personal -->
   <div class="modal fade" id="personalModal" aria-hidden="true">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h6 class="titulos">Conoce al personal</h6>
+            <h6 class="titulos-modal centrado">Conoce al personal</h6>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">X</span>
             </button>
           </div>
           <div class="modal-body">
             <div>
-              <img src="./../../../assets/images/1.jpg" alt="">
-              <p>Nombre de la encargada</p>
+              <img class="centrado-img" src="./../../../assets/images/1.jpg" alt="">
+              <p class="centrado">Responsable:</p>              
+              <p class="centrado">Luz Sanchez</p>
             </div>
             <div>
-              <img src="./../../../assets/images/2.jpg" alt="">
-              <p>Nombre del chofer</p>
+              <img class="centrado-img" src="./../../../assets/images/2.jpg" alt="">
+              <p class="centrado">Conductor:</p>
+              <p class="centrado">Alberto Ruiz</p>
             </div>
-            <p>numero de las placas</p>          
+            <p class="centrado">Numero de placas:</p>
+            <p class="centrado">NUT567-2i</p>         
           </div>        
         </div>
       </div>
@@ -59,7 +63,7 @@
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h6 class="titulos">Numeros de emergencia</h6>
+            <h6 class="titulos-modal">Numeros de emergencia</h6>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">X</span>
             </button>
