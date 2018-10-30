@@ -1,27 +1,27 @@
 <app-header></app-header>
 <!--padres-->
 <article class="container direccion">
-  <section class="row">
-    <div class="col">
-      <form>
-        <div class="input-group mb-3">
-          <div class="input-group-prepend">
-            <span class="input-group-text"><i class="fas fa-search-location"></i></span>
-          </div>
-          <input type="text" class="form-control" placeholder="Direccion">
-        </div>
-      </form>
+    <section class="row">
+        <div class="col">
+            <form>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="fas fa-search-location"></i></span>
+                    </div>
+                    <input type="text" class="form-control" placeholder="Direccion">
+                </div>
+            </form>
 
-    </div>
-  </section>
+        </div>
+    </section>
 </article>
 
 <main class="container ">
-  <section class="row">
-    <div class="col">
-      <img class="rounded img-map" src="./../../../assets/images/maps.png" alt="">
-    </div>
-  </section>
+    <section class="row">
+        <div class="col">
+            <img class="rounded img-map" src="./../../../assets/images/maps.png" alt="">
+        </div>
+    </section>
 </main>
 <br />
 
@@ -30,19 +30,36 @@
 
 <!--conductores-->
 <article class="container">
-  <section class="row">
-    <div class="col-sm-12">
-      <button class="btn btn-block boton-jornada">
+    <section class="row">
+        <div class="col-sm-12">
+            <button class="btn btn-block boton-jornada">
         Terminar Jornada
       </button>
-    </div>
-    <div class="col-sm-12">
-      <button class="btn btn-block boton-lista">
+        </div>
+        <div class="col-sm-12">
+            <button class="btn btn-block boton-lista">
         Lista
       </button>
-    </div>
-  </section>
+        </div>
+    </section>
 </article>
 
 <!--Lista-->
 <app-lista></app-lista>
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-6">
+            <app-list></app-list>
+        </div>
+        <div class="col-md-6">
+            <app-list-add></app-list-add>
+        </div>
+    </div>
+</div>
+
+<ul>
+    <li class="text" *ngFor="let item of items | async">
+        {{item.name}}
+    </li>
+</ul>

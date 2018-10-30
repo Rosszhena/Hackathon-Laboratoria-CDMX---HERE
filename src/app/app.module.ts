@@ -25,6 +25,8 @@ import {FlashMessagesService} from 'angular2-flash-messages';
 import { AuthService } from './services/auth.service';
 import { ConnectionService } from './services/connection.service';
 import { AuthGuard } from './guards/auth.guard';
+import { ListComponent } from './components/agenda/list/list.component';
+import { ListAddComponent } from './components/agenda/list-add/list-add.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +38,9 @@ import { AuthGuard } from './guards/auth.guard';
     HomepageComponent,
     AgendaComponent,
     ListaComponent,
-    FormComponent
+    FormComponent,
+    ListComponent,
+    ListAddComponent
   ],
   imports: [
     BrowserModule,
