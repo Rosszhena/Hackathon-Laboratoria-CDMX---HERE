@@ -28,9 +28,8 @@ import { AuthService } from './services/auth.service';
 import { ConnectionService } from './services/connection.service';
 import { AuthGuard } from './guards/auth.guard';
 import { MapComponent } from './components/map/map.component';
+import { RealvideoComponent } from './components/realvideo/realvideo.component';
 import { ConnectionbdService } from './services/connectionbd.service';
-
-
 
 @NgModule({
   declarations: [
@@ -43,6 +42,7 @@ import { ConnectionbdService } from './services/connectionbd.service';
     ListaComponent,
     FormComponent,
     MapComponent,
+    RealvideoComponent,
     ListComponent,
     ListAddComponent
   ],

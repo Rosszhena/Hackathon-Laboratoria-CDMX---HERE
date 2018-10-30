@@ -6,6 +6,7 @@ import { HomepageComponent } from './components/homepage/homepage.component';
 import { ForoComponent } from './components/foro/foro.component';
 import { LoginComponent } from './components/login/login.component';
 import { ListaComponent } from './components/lista/lista.component';
+import { RealvideoComponent } from './components/realvideo/realvideo.component'
 import { AuthGuard } from './guards/auth.guard';
 import { ListComponent } from './components/homepage/list/list.component';
 import { ListAddComponent } from './components/homepage/list-add/list-add.component';
@@ -17,8 +18,9 @@ const routes: Routes = [
   { path: 'homepage', component: HomepageComponent, canActivate: [AuthGuard] },
   { path: 'foro', component: ForoComponent, canActivate: [AuthGuard] },
   { path: 'lista', component: ListaComponent, canActivate: [AuthGuard] },
-  {path: 'list', component: ListComponent },
-  {path: 'list-add', component: ListAddComponent }
+  { path: 'realvideo', component: RealvideoComponent, canActivate: [AuthGuard]},
+  { path: 'list', component: ListComponent },
+  { path: 'list-add', component: ListAddComponent }
 ];
 
 @NgModule({
