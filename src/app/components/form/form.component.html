@@ -1,4 +1,4 @@
-<form>
-  <input class="form-control" type="text" placeholder="comparte con nosotros" id="comment">
+<form (ngSubmit)="add()">
+  <input class="form-control" type="text" placeholder="comparte con nosotros" name="publication" [(ngModel)]="issue.publication">
   <button class="btn btn-info mt-3" type="submit">Publicar</button>
 </form>

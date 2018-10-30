@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ConnectionService } from '../../services/connection.service';
 
 @Component({
   selector: 'app-form',
@@ -6,10 +7,22 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./form.component.css']
 })
 export class FormComponent implements OnInit {
+  issue: any = {
+    id: '',
+    userName: '',
+    userID: '',
+    datePost: '',
+    publication: ''
+  }
 
-  constructor() { }
+  constructor(private connection: ConnectionService) { }
 
   ngOnInit() {
+  }
+
+  add(){
+    this.connection.addIssue(this.issue);
+    this.issue.publication = '';
   }
 
 }
