@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { Observable } from 'rxjs';
+import { ConnectionService } from '../../services/connection.service';
 
 @Component({
   selector: 'app-foro',
@@ -9,12 +10,30 @@ import { Observable } from 'rxjs';
 })
 export class ForoComponent implements OnInit {
 
-  posts: Observable<any[]>;
-  constructor(db: AngularFirestore) {
-    this.posts = db.collection('issues').valueChanges();
+  issues: any;
+  updateIssue: any = {
+    publication: ''
+  }
+
+  constructor(private connection: ConnectionService) {
+    this.connection.listIssues().subscribe(issue => {
+      this.issues = issue;
+    })
   }
 
   ngOnInit() {
+  }
+
+  delete(issue) {
+    this.connection.deleteIssue(issue);
+  }
+
+  update(issue) {
+    this.updateIssue = issue;
+  }
+
+  addUpdate(){
+    this.connection.updateIssue(this.updateIssue);
   }
 
 }
