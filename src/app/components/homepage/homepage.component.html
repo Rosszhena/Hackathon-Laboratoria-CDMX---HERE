@@ -1,53 +1,6 @@
 <app-header></app-header>
-<!--padres-->
-<article class="container direccion">
-  <section class="row">
-    <div class="col">
-      <form>
-        <div class="input-group mb-3">
-          <div class="input-group-prepend">
-            <span class="input-group-text"><i class="fas fa-search-location"></i></span>
-          </div>
-          <input type="text" class="form-control" placeholder="Direccion">
-        </div>
-      </form>
-    </div>
-  </section>
-</article>
-<main class="container ">
-  <section class="row">
-    <div class="col-12">
-      <div>
-        <input type="text" [(ngModel)]="query">
-        <button type="button" (click)="getAddress()">Search</button>
-      </div>
-      <div>
-        <input type="text" [(ngModel)]="position">
-        <button type="button" (click)="getAddressFromLatLng()">Search</button>
-      </div>
-      <hr>
-      <table style="width: 100%">
-        <thead>
-          <tr style="text-align: left">
-            <th>Label</th>
-            <th>Latitude</th>
-            <th>Longitude</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr *ngFor="let location of locations">
-            <td>{{ raw }}{{ location.Location.Address.Label }}{{ endraw }}</td>
-            <td>{{ raw }}{{ location.Location.DisplayPosition.Latitude }}{{ endraw }}</td>
-            <td>{{ raw }}{{ location.Location.DisplayPosition.Longitude }}{{ endraw }}</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </section>
-</main>
-<br />
-
-<here-map></here-map>
+<app-map #map appId="Jl6dgI6xgxQkHhB6m6xm" appCode="SjyJioAfaeKasZSqEx90Ug" lat="19.404556" lng="-99.164029" width="75%"
+  height="530px"></app-map>
 
 <!--Agenda padres-->
 <!--codigo-->

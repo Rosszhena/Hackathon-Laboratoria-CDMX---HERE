@@ -25,7 +25,7 @@ import { FlashMessagesService } from 'angular2-flash-messages';
 import { AuthService } from './services/auth.service';
 import { ConnectionService } from './services/connection.service';
 import { AuthGuard } from './guards/auth.guard';
-import { HereMapComponent } from './here-map/here-map.component';
+import { MapComponent } from './components/map/map.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +38,7 @@ import { HereMapComponent } from './here-map/here-map.component';
     AgendaComponent,
     ListaComponent,
     FormComponent,
-    HereMapComponent
+    MapComponent
   ],
   imports: [
     BrowserModule,
