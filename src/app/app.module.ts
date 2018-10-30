@@ -31,7 +31,8 @@ import { ConnectionbdService } from './services/connectionbd.service';
 
 
 import { MapComponent } from './components/map/map.component';
-import { RoutingComponent } from './components/routing/routing.component';
+
+import { RealvideoComponent } from './components/realvideo/realvideo.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +47,10 @@ import { RoutingComponent } from './components/routing/routing.component';
     ListComponent,
     ListAddComponent,
     MapComponent,
-    RoutingComponent
+    MapComponent,
+    RealvideoComponent,
+    ListComponent,
+    ListAddComponent
   ],
   imports: [
     BrowserModule,

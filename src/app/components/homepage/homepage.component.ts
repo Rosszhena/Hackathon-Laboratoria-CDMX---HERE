@@ -11,14 +11,12 @@ import { upNotification } from './../../../assets/js/push';
   styleUrls: ['./homepage.component.css']
 })
 export class HomepageComponent implements OnInit {
-  public query: string;
   public isList: boolean;
   items: Observable<any[]>;
 
   constructor(db: AngularFirestore) {
     this.items = db.collection('agregar').valueChanges();
-    this.query = 'escuela';
-   }
+  }
 
   ngOnInit() {
     $('.botonF1').hover(function () {
@@ -36,4 +34,5 @@ export class HomepageComponent implements OnInit {
   upNotification() {
     upNotification();
   }
+
 }

@@ -10,6 +10,7 @@ declare var H: any;
 export class MapComponent implements OnInit {
   private ui: any;
   private search: any;
+  public query: string;
 
   @ViewChild("map")
   public mapElement: ElementRef;
@@ -35,7 +36,9 @@ export class MapComponent implements OnInit {
   private platform: any;
   private map: any;
 
-  public constructor() { }
+  public constructor() {
+    this.query = "escuela";
+  }
 
   public ngOnInit() {
     this.platform = new H.service.Platform({
@@ -51,7 +54,7 @@ export class MapComponent implements OnInit {
       this.mapElement.nativeElement,
       defaultLayers.normal.map,
       {
-        zoom: 10,
+        zoom: 12,
         center: { lat: this.lat, lng: this.lng }
       }
     );
@@ -72,7 +75,7 @@ export class MapComponent implements OnInit {
 
   private dropMarker(coordinates: any, data: any) {
     let marker = new H.map.Marker(coordinates);
-    marker.setData("<p>" + data.title + "<br>" + data.vicinity + "</p>");
+    marker.setData(`<p style="background-color:#FFFFFF; width:150px;"> ${data.title} <br> ${data.vicinity} </p>`);
     marker.addEventListener('tap', event => {
       let bubble = new H.ui.InfoBubble(event.target.getPosition(), {
         content: event.target.getData()
